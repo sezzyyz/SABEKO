@@ -206,7 +206,7 @@ img{
     }
 
     body{
-        background-color: #ddd;
+        background-color: #f5f5f5;
         width: 100vw;
         height: 100%;
         overflow-y: auto;
@@ -255,7 +255,7 @@ img{
         max-width: 100%;
         max-height: 100%;
         width: 20em;
-        background-color: #EDFCF5;
+        background-color: #d9faea;
         padding: 7px;
         margin-top: 1em;
         box-sizing: border-box;
