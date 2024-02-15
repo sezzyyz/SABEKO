@@ -1,0 +1,347 @@
+:root {
+    --dark: #212121;
+    --light: #F3F3F3;
+    --grey: #8A8A8B;
+    --primary: #AF1E2D;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+}
+
+a {
+    text-decoration: none;
+    color: #212121;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*Top Part*/
+.top-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.SABEKO{
+    display: flex;
+    flex-wrap: wrap;
+    order: 1;
+    flex: 1;
+    padding: 8px;
+    line-height: 0.3;
+}
+
+.SABEKO span{
+    margin: auto;
+}
+
+.navbar {
+    order: 2;
+    flex: 4;
+}
+
+.navbar .menu{
+    word-spacing: 6em;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 1.3em auto;
+}
+
+.profile {
+    order: 3;
+    flex: 1;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.profile p{
+    margin: 2em auto;
+}
+
+/*Search Bar*/
+.search-bar {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100% auto;
+    margin: auto;
+    padding: 6px;
+    box-sizing: 2px border-box;
+    justify-content: center;
+}
+
+.search-bar .search-box{
+    height: 2em;
+    width: 30em;
+    border: 2px red;
+    border-radius: 20px;
+    font-size: 16px;
+    box-shadow: 2px 3px 4px grey;
+}
+
+/*Middle Part*/
+.mid-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100% auto;
+    margin: auto;
+    padding: 1em;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.sub-container1 {
+    order: 1;
+    margin-left: 2em;
+    margin-top: -0.15em;
+    height: 22em;
+    text-align: center;
+    justify-content: center;
+}
+
+.sub-container2 {
+    margin-top: 1.2em;
+    order: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sub-container2 .child-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sub-container3 {
+    order: 3;
+    margin-right: 0.1em;
+    margin-top: -0.15em;
+}
+
+.artikel-2 {
+    order: 1;
+    height: 8em;
+    width: 39em;
+    margin-top: -1.35em;
+    text-align: center;
+}
+
+.artikel-3 {
+    order: 2;
+    height: 12.83em;
+    width: 19em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.artikel-4 {
+    order: 3;
+    height: 12.83em;
+    width: 19em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.artikel-5 {
+    width: 19em;
+    text-align: center;
+}
+
+.artikel-5 span{
+    text-align: left;
+}
+
+
+/*Bottom Part*/
+.bot-container {
+    padding: 15px;
+    display: flex;
+}
+
+.sub-container4 {
+    margin-left: 1.95em;
+    margin-right: 2.2em;
+}
+
+.sub-container5 {
+    flex-direction: column;
+}
+
+.artikel-6 {
+
+}
+
+.artikel-7 {
+
+}
+
+.artikel-8 {
+    margin-top: 1.5em;
+}
+
+/*Mobile View*/
+.layanan, .pelayanan, .box-service{
+    display: none;
+}
+
+/*Responsive Mobile View*/
+@media screen and (max-width: 500px) {
+    
+    html {
+        position: fixed;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    body{
+        background-color: #ddd;
+        width: 100vw;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .navbar, .mid-container, .bot-container {
+        display: none;
+    }
+
+    /*Responsive Mobile Top Part*/
+    .SABEKO{
+        text-align: left;
+        margin-left: -3em;
+        font-size: 10px;
+    }
+
+    .search-bar .search-box{
+        justify-content: center;
+        height: 1.7em;
+        width: 20em;
+        margin-top: -1em;
+        border: 2px;
+        border-radius: 20px;
+        font-size: 14px;
+        box-shadow: 2px 3px 4px grey;
+    }
+    
+    .profile {
+        padding-right: 1em;
+        font-size: 1.1em;
+        text-align: right;
+        margin-top: -1em;
+    }
+
+    .layanan{
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        margin-top: -0.6em;
+    }
+
+    .layanan .konsultasi{
+        display: flex;
+        max-width: 100%;
+        max-height: 100%;
+        background-color: #EDFCF5;
+        padding: 7px;
+        margin-top: 1em;
+        box-sizing: border-box;
+        border: #212121;
+        border-radius: 15px;
+    }
+
+    .konsultasi h1{
+        margin-top: 0.3em;
+        font-size: 15px;
+    }
+
+    .konsultasi p{
+        font-size: 11px;
+        line-height: 1.2em;
+    }
+
+    .konsultasi-text{
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .konsultasi-pict{
+        max-width: 100%;
+        max-height: 100%;
+        margin: 1em auto;
+    }
+
+    .konsultasi .button {
+        width: 100px;
+        height: 25px;
+        background: #6ACC9F;
+        border-radius: 20px;
+        border: none;
+        color: #fff;
+        font-size: 10px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    /*Responsive Mobile Middle Part*/
+    .pelayanan {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0.3em;
+        justify-content: space-around;
+        gap: 8em;
+    }
+
+    .pelayanan .mid-left{
+        font-size: 8px;
+        padding: 1em;
+    }
+
+    .pelayanan .mid-right{
+        padding: 1em;
+        color: #6ACC9F;
+        font-size: 15px;
+    }
+
+    /*Responsive Mobile Bottom Part*/
+    .box-service{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        flex-direction: row;
+        padding: 2.7em;
+        margin-top: -2.5em;
+    }
+
+    .box1{
+        border: #ffffff;
+        border-radius: 10px;
+    }
+
+    .box2{
+        border: #ffffff;
+        border-radius: 10px;
+    }
+
+    .box3{
+        border: #ffffff;
+        border-radius: 10px;
+    }
+
+    .box4{
+        border: #ffffff;
+        border-radius: 10px;
+    }
+}
