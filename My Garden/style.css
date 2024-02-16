@@ -21,7 +21,7 @@ body {
 }
 
 /*Responsive Mobile View*/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 450px) {
     
     html {
         position: fixed;
@@ -40,7 +40,15 @@ body {
 
     /*Responsive Mobile Top Part*/
     .title{
-        background-color: #AF1E2D;
+        font-size: 12px;
+        display: flex;
+    }
+
+    .keep{
+        background-color: #f5f5f5;
+        gap: 5em;
+        width: 100%;
+        position: absolute;
         display: flex;
         justify-content: space-around;
     }
@@ -50,80 +58,167 @@ body {
     }
 
     /*Responsive Mobile Middle Part*/
-    .list-column{
-        background-color: #5bdb11;
-        padding: 5.78em;
+    .container-keep{
+        border: 1px;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        up: 0;
+        background-color: #f0efef;
+        z-index: 3000;
+    }
+
+    .center{
         display: flex;
-        justify-content: space-around;
-        gap: -3em;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .list-column{
+        margin-top: 2em;
+        padding: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 0.6em;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .dummy{
+        margin-top: 18em;
+    }
+
+    .list-column .box-1{
+    }
+
+    .list-column .box-2{
+    }
+
+    .list-column .box-3{
+    }
+
+    .list-column .box-4{
+    }
+
+    .list-column .box-5{
+    }
+
+    .list-column .box-6{
+    }
+
+    .list-column .box-7{
+    }
+
+    .list-column .box-8{
+    }
+
+    .list-column .box-9{
+    }
+
+    .list-column .box-10{
+    }
+
+    .list-column .box-11{
+    }
+
+    .list-column .box-12{
     }
 
     /*Responsive Mobile Bottom Part*/
     .sub-title{
-        background-color: #AF1E2D;
         display: flex;
         justify-content: space-around;
-        gap: 14em;
+        gap: 8em;
     }
 
     .sub-title .title-farm-set-layout{
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .sub-title .information{
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .base-layout{
-        background-color: #5bdb11;
-        padding: 1em;
         justify-content: center;
+        padding-bottom: 1em;
     }
 
     .base-layout .child-base-layout{
         display: flex;
         flex-wrap: wrap;
-        background-color: #bbff00;
-        margin-left: 4em;
-        margin-right: 4em;
-        padding: 0.4em;
+        background-color: #ddd;
+        margin-left: 2.7em;
+        margin-right: 2.7em;
+        padding: 0.7em;
         justify-content: space-around;
         gap: 0.1em;
+        box-shadow: 1px 1px 9px #757575;
+        border: 1px;
+        border-radius: 4px;
     }
 
     .base-layout .child-base-layout .layout-1{
-        background-color: #0be7b7;
-        width: 4.5em;
-        height: 2em;
+        background-color: #519A2E;
+        width: 6em;
+        height: 2.5em;
         padding: 1em;
+        box-shadow: 3px 3px 9px #757575;
+        border: 1px;
+        border-radius: 4px;
     }
 
     .base-layout .child-base-layout .layout-2{
-        background-color: #5f0be7;
-        width: 5em;
-        height: 3em;
+        background-color: #4D9941;
+        width: 5.5em;
+        height: 3.5em;
         padding: 1em;
+        box-shadow: 3px 3px 9px #757575;
+        border: 1px;
+        border-radius: 4px;
     }
 
     .base-layout .child-base-layout .layout-3{
-        background-color: #120681;
-        width: 4em;
-        height: 3em;
-        padding: 1em;
+        background-color: #088815;
+        width: 5.3em;
+        height: 3.5em;
+        padding: 0.8em;
+        box-shadow: 3px 3px 9px #757575;
+        border: 1px;
+        border-radius: 4px;
     }
 
     .base-layout .child-base-layout .layout-4{
-        background-color: #e70b79;
-        width: 5.5em;
+        background-color: #73B849;
+        width: 6.5em;
         height: 2em;
         padding: 1em;
         margin-top: 1em;
+        box-shadow: 3px 3px 9px #757575;
+        border: 1px;
+        border-radius: 4px;
     }
 
-    .set-layout{
+    .set-layout-button{
         display: flex;
-        font-size: 10px;
         justify-content: center;
-        background-color: #173d01;
+    }
+
+    .set-layout-button button{
+        width: 340px;
+        height: 40px;
+        background: #55af85;
+        border-radius: 15px;
+        border: none;
+        font-weight: bold;
+        color: #000000c9;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-bottom: 1em;
     }
 }
