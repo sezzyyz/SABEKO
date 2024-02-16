@@ -1,0 +1,129 @@
+:root {
+    --dark: #212121;
+    --light: #F3F3F3;
+    --grey: #8A8A8B;
+    --primary: #AF1E2D;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+}
+
+/*Mobile View*/
+.title, .list-column, .sub-title, .set-layout{
+    display: none;
+}
+
+/*Responsive Mobile View*/
+@media screen and (max-width: 480px) {
+    
+    html {
+        position: fixed;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    body{
+        background-color: #f5f5f5;
+        width: 100vw;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /*Responsive Mobile Top Part*/
+    .title{
+        background-color: #AF1E2D;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .title .MyGarden{
+        font-size: 12px;
+    }
+
+    /*Responsive Mobile Middle Part*/
+    .list-column{
+        background-color: #5bdb11;
+        padding: 5.78em;
+        display: flex;
+        justify-content: space-around;
+        gap: -3em;
+    }
+
+    /*Responsive Mobile Bottom Part*/
+    .sub-title{
+        background-color: #AF1E2D;
+        display: flex;
+        justify-content: space-around;
+        gap: 14em;
+    }
+
+    .sub-title .title-farm-set-layout{
+        font-size: 12px;
+    }
+
+    .sub-title .information{
+        font-size: 12px;
+    }
+
+    .base-layout{
+        background-color: #5bdb11;
+        padding: 1em;
+        justify-content: center;
+    }
+
+    .base-layout .child-base-layout{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #bbff00;
+        margin-left: 4em;
+        margin-right: 4em;
+        padding: 0.4em;
+        justify-content: space-around;
+        gap: 0.1em;
+    }
+
+    .base-layout .child-base-layout .layout-1{
+        background-color: #0be7b7;
+        width: 4.5em;
+        height: 2em;
+        padding: 1em;
+    }
+
+    .base-layout .child-base-layout .layout-2{
+        background-color: #5f0be7;
+        width: 5em;
+        height: 3em;
+        padding: 1em;
+    }
+
+    .base-layout .child-base-layout .layout-3{
+        background-color: #120681;
+        width: 4em;
+        height: 3em;
+        padding: 1em;
+    }
+
+    .base-layout .child-base-layout .layout-4{
+        background-color: #e70b79;
+        width: 5.5em;
+        height: 2em;
+        padding: 1em;
+        margin-top: 1em;
+    }
+
+    .set-layout{
+        display: flex;
+        font-size: 10px;
+        justify-content: center;
+        background-color: #173d01;
+    }
+}
