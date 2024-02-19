@@ -8,25 +8,67 @@
 </head>
 
 <body>
-    <!--Top Part-->
-    <div class="title">
-        <div class="back"></div>
-
-        <div class="PlantingPlan">
-            <h2>Planting Plan</h2>
+        <!--Top Part-->
+        <div class="title">
+            <div class="back"><h2><</h2></div>
+    
+            <div class="PlantAnalyzer">
+                <h2>Plant Analyzer</h2>
+            </div>
+                
+            <div class="next"><h2>></h2></div>
         </div>
-            
-        <div class="next"></div>
-    </div>
+        <br>
 
-    <div class="customization-title">
+        <div class="search-container">
+            <div class="search-bar">
+                <div class="autocomplete">
+                <input type="text" class="search-box" id="plants-box" name="search" autocomplete="off" placeholder="   Cari tanaman" minlength="2">
+                </div>
+            </div>
+            <div id="plantList" class="autocomplete-items"></div>
+        </div>
+        <br>
+
+        <div class="box">
+            <div class="images">
+                <img src="../Images/Mobile/SmartGardener/cabaimerah.png" alt="">
+            </div>
+        </div>
+
         <div class="sub-title">
-            <h2>Kustomisasi Persiapan</h2>
+            <h2>Masalah Yang Terjadi</h2>
         </div>
 
-        <div class="information">
-            <h2>I</h2>
+        <div class="box-2">
+            <div class="check">
+                <div class="check-box">1</div>
+                <div class="problem">Tanaman tidak kunjung tumbuh</div>
+            </div>
+            
+            <div class="check">
+                <div class="check-box">1</div>
+                <div class="problem">Daun tanaman rontok</div>
+            </div>
+
+            <div class="check">
+                <div class="check-box">1</div>
+                <div class="problem">Tanaman tidak berbuah</div>
+            </div>
+
+            <div class="check">
+                <div class="check-box">1</div>
+                <div class="problem">Daun tanaman berlubang</div>
+            </div>
+
+            <div class="check">
+                <div class="check-box">1</div>
+                <div class="problem">Tanaman menjadi kering</div>
+            </div>
+
+            <div class="check">
+                <div class="check-add">OPSIONAL</div>
+            </div>
         </div>
-    </div>
 </body>
 </html>
