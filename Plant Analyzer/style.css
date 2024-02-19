@@ -15,13 +15,73 @@ body {
     background-color: #ddd;
 }
 
+/*Search Bar*/
+.search-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.search-bar {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100% auto;
+    margin: auto;
+    padding: 6px;
+    box-sizing: 2px border-box;
+    justify-content: center;
+}
+
+.search-bar .search-box{
+    padding: 0.2em;
+    height: 2em;
+    width: 30em;
+    border: 2px;
+    border-radius: 20px;
+    font-size: 16px;
+    box-shadow: 2px 3px 4px grey;
+}
+
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+.autocomplete-items {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    position: absolute;
+    top: 7em;
+    z-index: 2; /* Pastikan lebih tinggi dari mid-container */
+    background-color: #ffffffdc;
+    border: 2px;
+    border-radius: 7px;
+    margin-left: 3em;
+    width: 77%;
+}
+
+.items-link {
+	text-decoration: none;
+	color: black;
+    display: flex;
+    max-width: 100%;
+    border: 1.5px solid #8ee5bc31;
+    border-radius: 4px;
+}
+
+.items-link:hover {
+	text-decoration: underline;
+	color: black;
+}
 /*Mobile View*/
 .title, .customization-title{
     display: none;
 }
 
 /*Responsive Mobile View*/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 450px) {
     
     html {
         position: fixed;
@@ -40,29 +100,73 @@ body {
 
     /*Responsive Mobile Top Part*/
     .title{
-        background-color: #AF1E2D;
+        background-color: #f5f5f5;
         display: flex;
         justify-content: space-around;
+        font-size: 12px;
+        gap: 5em;
     }
 
-    .title .PlantingPlan{
+    .title .PlantAnalyzer{
+        display: flex;
+        flex-wrap: nowrap;
         font-size: 12px;
     }
 
-    .customization-title{
-        background-color: #0b53d8;
+    .search-bar .search-box{
+        justify-content: center;
+        height: 1.9em;
+        width: 25em;
+        margin-top: -1em;
+        border: 2px;
+        border-radius: 20px;
+        font-size: 14px;
+        box-shadow: 2px 3px 4px grey;
+    }
+    
+    /*Responsive Mobile Middle Part*/
+    .box{
         display: flex;
-        justify-content: space-around;
-        gap: 12em;
+        flex-wrap: wrap;
+        flex-direction: column;
+        border: 0.2em solid #06b806;
+        border-radius: 16px;
+        margin-left: 3em;
+        margin-right: 3em;
+        margin-bottom: 1em;
     }
 
-    .customization-title .sub-title{
-        font-size: 13px;
+    .box .images{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2em;
     }
 
-    .customization-title .information{
-        font-size: 12px;
+    .sub-title{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        font-size: 14px;
+        margin-left: 0.3em;
     }
 
+    .box-2{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 1em;
+        background-color: #06b806;
+    }
 
+    .box-2 .check{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .box-2 .check .check-box{
+        border: 1px solid;
+        padding: 0.1em;
+    }
 }
