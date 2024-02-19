@@ -48,6 +48,8 @@ body {
     }
 
     .title .SmartGardener{
+        display: flex;
+        flex-wrap: nowrap;
         font-size: 12px;
     }
 
@@ -128,6 +130,7 @@ body {
     /*Responsive Mobile Bottom Part*/
     .sub-title2{
         display: flex;
+        flex-wrap: nowrap;
         justify-content: start;
         margin-left: 0.4em;
         margin-top: -1em;
