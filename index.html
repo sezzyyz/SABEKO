@@ -28,29 +28,39 @@
         </div>
     </div>
 
-    <div class="search-bar">
-        <input class="search-box" type="text" placeholder="   Apa yang ingin kamu cari?">
-    </div>
+    <div class="search-container">
+		<div class="search-bar">
+            <div class="autocomplete">
+			<input type="text" class="search-box" id="plants-box" name="search" autocomplete="off" placeholder="   Apa yang ingin kamu cari?" minlength="2">
+            </div>
+        </div>
+        <div id="plantList" class="autocomplete-items"></div>
+	</div>
+
 
     <!--Middle Part-->
     <div class="mid-container">
         <div class="sub-container1">
             <img src="Images/Dekstop/HomePage/article1.png" alt="Artikel-1">
+            <h2>Masa Panen Raya<br> Mulai Maret<br> 2024.</h2>
         </div>
         
         <div class="sub-container2">
             <span>
                 <div class="artikel-2">
                     <img src="Images/Dekstop/HomePage/article2.png" alt="Artikel-2">
+                    <h2>Garap Sawah Dengan<br> Teknologi Modern.</h2>
                 </div>
 
                 <div class="child-container">
                     <div class="artikel-3">
                         <img src="Images/Dekstop/HomePage/article3.png" alt="Artikel-3">
+                        <h2>Manfaat Pupuk Bagi<br> Tanaman.</h2>
                     </div>
                     
                     <div class="artikel-4">
                         <img src="Images/Dekstop/HomePage/article4.png" alt="Artikel-4">
+                        <h2>Jadikan Tanaman<br> Menjadi Lebih <br> sehat.</h2>
                     </div>
                 </div>
             </span>
@@ -59,6 +69,7 @@
         <div class="sub-container3">
             <div class="artikel-5">
                 <img src="Images/Dekstop/HomePage/article5.png" alt="artikel-5">
+                <h2>Jenis Sayuran Yang<br> Bermanfaat Bagi Tubuh.</h2>
                 <span class="tag1"><h1><br>Popular</h1></span>
             </div>
         </div>
@@ -68,15 +79,20 @@
     <div class="bot-container">
         <div class="sub-container4">
             <img src="Images/Dekstop/HomePage/article6.png" alt="Artikel-6">
+            <h2>Harga Tomat Melambung Tinggi<br> Hingga Rp30.000/Kilogram.</h2>
         </div>
 
         <div class="sub-container5">
             <div class="artikel-7">
                 <img src="Images/Dekstop/HomePage/article7.png" alt="Artikel-7">
+                <h2>Kegiatan<br> Bercocok-tanam,<br> Kini Menjadi<br> Trend Di<br> Kalangan Remaja.</h2>
+                <p>Kompas TV</p>
             </div>
                 
             <div class="artikel-8">
                 <img src="Images/Dekstop/HomePage/article8.png" alt="Artikel-8">
+                <h2>Beberapa Hal Yang<br> Harus Kamu Tau<br> Dari Buah Pisang,<br> Ternyata Banyak<br> Manfaatnya.<br> Lihat Sekarang!!</h2>
+                <p>CNN Indonesia</p>
             </div>
         </div>
     </div>
@@ -136,5 +152,37 @@
             </a>
         </div>
     </div>
+    
+    <!--JavaScript Function Part-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+	$(document).ready(function(){
+
+		$("#plants-box").keyup(function(){
+		var plants = $(this).val();
+
+		if(plants != ''){
+			$.ajax({
+				url: "search-process.php",
+				method: "POST",
+				data: {plants: plants},
+				success: function(data){
+					console.log(data);
+					$("#plantList").fadeIn("fast").html(data);
+				}
+			});
+		} else {
+			$("#plantList").fadeOut();
+		}
+	});
+
+	$(document).on('click','#plantList div',function(){
+		$('#plants-box').val($(this).text());
+		$('#plantList').fadeOut();
+	});
+
+});
+
+</script>
 </body>
 </html>
