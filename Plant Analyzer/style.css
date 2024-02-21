@@ -153,20 +153,37 @@ body {
 
     .box-2{
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        padding: 1em;
-        background-color: #06b806;
-    }
-
-    .box-2 .check{
-        display: flex;
-        flex-wrap: wrap;
         flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1em;
+        gap: 1em;
     }
 
-    .box-2 .check .check-box{
-        border: 1px solid;
-        padding: 0.1em;
+    select {
+        width: 200px;
+        padding: 5px;
     }
+
+    .set-layout-button{
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+    }
+
+    .set-layout-button button{
+        width: 340px;
+        height: 40px;
+        background: #55af85;
+        border-radius: 15px;
+        border: none;
+        font-weight: bold;
+        color: #000000c9;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+
 }
